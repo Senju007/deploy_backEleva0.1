@@ -1,4 +1,4 @@
-# Create your views here.
+﻿# Create your views here.
 from django.shortcuts import render
 from django.shortcuts import render
 from django.http.response import JsonResponse
@@ -761,7 +761,7 @@ def prevaccin_detail(request, pk):
                     return JsonResponse(prevaccin_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
                     
                 @Rule(Fact(etat='Achevé'),Fact(nom='VITAMINE 2'),Fact(type='Poule pondeuse'))
-                def prevaccin10(self):
+                def prevaccin3(self):
                     date = prevaccin_data_json["date_debut"]
                     date_init = datetime.datetime.strptime(date, "%Y-%m-%d")
                     date_days = date_init + timedelta(days=5)
@@ -807,7 +807,7 @@ def prevaccin_detail(request, pk):
                 
 
                 @Rule(Fact(etat='Achevé'),Fact(nom='VITAMINE 4'),Fact(type='Poule pondeuse'))
-                def prevaccin3(self):
+                def prevaccin5(self):
                     date = prevaccin_data_json["date_debut"]
                     date_init = datetime.datetime.strptime(date, "%Y-%m-%d")
                     date_days = date_init + timedelta(days=22 )
@@ -846,7 +846,7 @@ def prevaccin_detail(request, pk):
                     return JsonResponse(prevaccin_serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
 
                 @Rule(Fact(etat='Achevé'),Fact(nom='AROATY'),Fact(type='Poule pondeuse'))
-                def prevaccin8(self):
+                def prevaccin7(self):
                     date = prevaccin_data_json["date_debut"]
                     date_init = datetime.datetime.strptime(date, "%Y-%m-%d")
                     date_days = date_init + timedelta(days=7)
@@ -868,7 +868,7 @@ def prevaccin_detail(request, pk):
                     return JsonResponse(prevaccin_serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
 
                 @Rule(Fact(etat='Achevé'),Fact(nom='VITAMINE 7'),Fact(type='Poule pondeuse'))
-                def prevaccin9(self):
+                def prevaccin8(self):
                     date = prevaccin_data_json["date_debut"]
                     date_init = datetime.datetime.strptime(date, "%Y-%m-%d")
                     date_days = date_init + timedelta(days=79)
@@ -891,7 +891,7 @@ def prevaccin_detail(request, pk):
 
 
                 @Rule(Fact(etat='Achevé'),Fact(nom='VITAMINE 8'),Fact(type='Poule pondeuse'))
-                def prevaccin10(self):
+                def prevaccin9(self):
                     date = prevaccin_data_json["date_debut"]
                     date_init = datetime.datetime.strptime(date, "%Y-%m-%d")
                     date_days = date_init + timedelta(days=13)
